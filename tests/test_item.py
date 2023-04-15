@@ -17,3 +17,10 @@ def test_apply_discount(test_item):
     test_item.apply_discount()
     assert test_item.price == 5000
 
+def test_instantiate_from_csv():
+    Item.instantiate_from_csv()
+    assert Item.all[-1].name == 'Клавиатура'
+
+def test_string_to_number():
+    assert Item.string_to_number('10') == 10
+    assert Item.string_to_number('11.789') == 11
