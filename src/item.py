@@ -41,6 +41,9 @@ class Item:
         """
         self.price = int(self.price * self.pay_rate)
 
+    def __add__(self, other):
+        return self.quantity + other.quantity
+
     @property
     def name(self):
         return self.__name
